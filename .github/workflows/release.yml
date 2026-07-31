@@ -1,9 +1,20 @@
 name: Release
 
 on:
+  # Pushing a tag by hand still works. It is the escape hatch for a release that
+  # does not come from a version bump on main.
   push:
     tags:
       - 'v*'
+  # Called by tag.yml as soon as the version on main changes. It is a call rather than
+  # a tag push because a tag pushed with GITHUB_TOKEN does not start another workflow,
+  # so leaning on the tag event would tag quietly and never publish.
+  workflow_call:
+    inputs:
+      version:
+        description: The version being released, with no leading v.
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -24,14 +35,27 @@ jobs:
 
       - run: npm ci
 
-      # A tag that disagrees with package.json publishes the wrong version under the
-      # right name, and npm will not let you take it back. Stop before that happens.
-      - name: Check the tag matches package.json
+      # One path arrives with the version as an input, the other as a tag name.
+      - name: Work out which version this is
+        id: target
+        env:
+          GIVEN: ${{ inputs.version }}
         run: |
-          tagged="${GITHUB_REF_NAME#v}"
+          if [ -n "$GIVEN" ]; then
+            echo "value=$GIVEN" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Publishing the wrong version under the right name is not something npm lets you
+      # take back. Stop before that happens.
+      - name: Check it matches package.json
+        env:
+          ASKED: ${{ steps.target.outputs.value }}
+        run: |
           declared="$(node -p "require('./package.json').version")"
-          if [ "$tagged" != "$declared" ]; then
-            echo "tag v$tagged does not match package.json $declared"
+          if [ "$ASKED" != "$declared" ]; then
+            echo "asked for $ASKED but package.json says $declared"
             exit 1
           fi
 
