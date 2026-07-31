@@ -27,7 +27,10 @@ jobs:
       # The tarball every later job installs is built once, here, on one version.
       - name: Pack
         if: matrix.node == 24
-        run: npm pack --pack-destination ./packed
+        # npm will not create the destination itself, it just fails on it.
+        run: |
+          mkdir -p packed
+          npm pack --pack-destination ./packed
       - uses: actions/upload-artifact@v4
         if: matrix.node == 24
         with:
