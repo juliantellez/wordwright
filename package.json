@@ -24,21 +24,24 @@
     "tui"
   ],
   "bin": {
-    "wordwright": "src/cli.ts"
+    "wordwright": "dist/cli.js"
   },
   "files": [
-    "src",
+    "dist",
     "data",
     "README.md",
     "LICENSE"
   ],
   "engines": {
-    "node": ">=22.18"
+    "node": ">=20.11"
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "node --experimental-strip-types --disable-warning=ExperimentalWarning --test \"src/**/*.test.ts\"",
-    "start": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/cli.ts"
+    "start": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/cli.ts",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && node --experimental-strip-types --disable-warning=ExperimentalWarning tools/build.ts",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

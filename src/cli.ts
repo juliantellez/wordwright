@@ -2,22 +2,8 @@
 //
 // wordwright: type faster, and write better while you do it.
 //
-// Usage:
-//   wordwright                     pick a level and a mode, then practise
-//   wordwright drill [options]     type sentences, measured in words per minute
-//   wordwright compose [options]   write to a brief, graded on grammar and intent
-//   wordwright stats               speed, accuracy, streak, and your weakest patterns
-//   wordwright packs               every pack loaded, and anything that failed to load
-//   wordwright add <file.json>     install a pack of your own from a file
-//   wordwright template            print a pack skeleton you can fill in
-//
-// Options:
-//   --level <beginner|intermediate|advanced>   default: asked, or your weakest
-//   --count <n>                                exercises in the session (default 8)
-//   --plain                                    no colour and no alternate screen
-//
-// Your history lives in ~/.wordwright/progress.json. Your own packs live in
-// ~/.wordwright/packs/. Nothing leaves the machine and nothing is fetched.
+// Argument parsing, and the commands that print rather than draw. Everything
+// interactive lives in tui/app.ts.
 //
 
 import fs from "node:fs";
@@ -66,17 +52,28 @@ export function parseArgs(argv: string[]): Args {
   return args;
 }
 
-function usage(): string {
-  const source = fs.readFileSync(new URL(import.meta.url), "utf8");
-  const lines = source.split("\n");
-  const start = lines.findIndex((line) => line.startsWith("// wordwright:"));
-  const body: string[] = [];
-  for (const line of lines.slice(start)) {
-    if (!line.startsWith("//")) break;
-    body.push(line.replace(/^\/\/ ?/, ""));
-  }
-  return body.join("\n");
-}
+/**
+ * Held as a string rather than read back out of this file's own comments. The published
+ * package runs the compiled build, where those comments are gone.
+ */
+const USAGE = `wordwright: type faster, and write better while you do it.
+
+Usage:
+  wordwright                     pick a level and a mode, then practise
+  wordwright drill [options]     type sentences, measured in words per minute
+  wordwright compose [options]   write to a brief, graded on grammar and intent
+  wordwright stats               speed, accuracy, streak, and your weakest patterns
+  wordwright packs               every pack loaded, and anything that failed to load
+  wordwright add <file.json>     install a pack of your own from a file
+  wordwright template            print a pack skeleton you can fill in
+
+Options:
+  --level <beginner|intermediate|advanced>   default: asked, or your weakest
+  --count <n>                                exercises in the session (default 8)
+  --plain                                    no colour and no alternate screen
+
+Your history lives in ~/.wordwright/progress.json. Your own packs live in
+~/.wordwright/packs/. Nothing leaves the machine and nothing is fetched.`;
 
 function commandStats(plain: boolean): void {
   const progress = loadProgress();
@@ -213,7 +210,7 @@ async function main(): Promise<number> {
   const plain = args.plain || !process.stdout.isTTY;
 
   if (args.help || args.command === "help") {
-    process.stdout.write(`${usage()}\n`);
+    process.stdout.write(`${USAGE}\n`);
     return 0;
   }
 
