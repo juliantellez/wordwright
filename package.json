@@ -1,0 +1,47 @@
+{
+  "name": "wordwright",
+  "version": "0.1.0",
+  "description": "A terminal typing trainer that also teaches grammar, vocabulary and intent.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Julian Tellez",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliantellez/wordwright.git"
+  },
+  "homepage": "https://github.com/juliantellez/wordwright",
+  "bugs": {
+    "url": "https://github.com/juliantellez/wordwright/issues"
+  },
+  "keywords": [
+    "typing",
+    "typing-tutor",
+    "wpm",
+    "grammar",
+    "vocabulary",
+    "writing",
+    "cli",
+    "tui"
+  ],
+  "bin": {
+    "wordwright": "src/cli.ts"
+  },
+  "files": [
+    "src",
+    "data",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --disable-warning=ExperimentalWarning --test \"src/**/*.test.ts\"",
+    "start": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/cli.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.0"
+  }
+}
