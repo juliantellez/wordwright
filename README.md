@@ -1,5 +1,8 @@
 # wordwright
 
+[![npm](https://img.shields.io/npm/v/wordwright)](https://www.npmjs.com/package/wordwright)
+[![CI](https://github.com/juliantellez/wordwright/actions/workflows/ci.yml/badge.svg)](https://github.com/juliantellez/wordwright/actions/workflows/ci.yml)
+
 A terminal typing trainer that makes you type the sentence, then tells you why the sentence is built that way.
 
 Most typing tutors feed you scrambled words or a paragraph lifted from a novel. You get faster at hitting keys and you learn nothing else. Every sentence in wordwright is chosen to teach one thing: a semicolon that joins two whole sentences, an appositive that defines a noun in passing, the difference between fewer and less. You type it, you see your speed, and then you get two or three sentences explaining the pattern you just typed.
@@ -19,21 +22,28 @@ Then it asks you to write one yourself.
   esc quit    ctrl+r restart    tab skip
 ```
 
-## Running it
+## Installing it
 
-Needs Node 22.18 or newer. There is no build step and there are no runtime dependencies.
+```sh
+npm install -g wordwright
+wordwright
+```
+
+Needs Node 20.11 or newer, and there are no runtime dependencies. If you would rather not
+install anything:
+
+```sh
+npx wordwright
+```
+
+Working on it instead? The repository runs straight off TypeScript with no build step,
+which needs Node 22.18 or newer:
 
 ```sh
 git clone https://github.com/juliantellez/wordwright.git
 cd wordwright
+npm install
 ./src/cli.ts
-```
-
-Or install it so the command is on your path:
-
-```sh
-npm install -g .
-wordwright
 ```
 
 ```
