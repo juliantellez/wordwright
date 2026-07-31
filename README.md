@@ -145,10 +145,18 @@ It does not do multi paragraph writing, and it will not teach you to type if you
 
 The corpus is currently 81 exercises. That is enough for weeks of daily practice and it is nowhere near enough forever, which is why the pack format is the first thing documented.
 
+## How it is built
+
+[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) has the diagrams: the module graph, a drill
+from keystroke to stored attempt, the session loop, how grading and selection work, and
+where the data lives. The short version is that three files touch the outside world and
+everything else is a function from values to values. `src/boundaries.test.ts` asserts that,
+so the document fails the build rather than quietly going out of date.
+
 ## Tests
 
 ```sh
-npm test          # 127 tests, node's own runner, no framework
+npm test          # 135 tests, node's own runner, no framework
 npm run typecheck # strict typescript, no any
 npm run build     # compile to dist/, which is what gets published
 ```
