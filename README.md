@@ -138,8 +138,32 @@ The corpus is currently 81 exercises. That is enough for weeks of daily practice
 ## Tests
 
 ```sh
-npm test          # 124 tests, node's own runner, no framework
+npm test          # 127 tests, node's own runner, no framework
 npm run typecheck # strict typescript, no any
+npm run build     # compile to dist/, which is what gets published
 ```
+
+## Releasing
+
+The repository runs on TypeScript with no build step, because Node strips the types for
+you. That stops working the moment the package is installed: Node refuses to strip types
+for anything under `node_modules`, so a published package has to ship JavaScript.
+
+So `npm run build` compiles `src/` to `dist/`, and `dist/cli.js` is what the `wordwright`
+command points at. The `.ts` import extensions are rewritten to `.js` on the way out, and
+the shebang loses its type stripping flags.
+
+Publishing happens in CI, never from a laptop. Push a tag and the release workflow checks
+the tag against `package.json`, runs the tests, builds, installs the packed tarball,
+runs the command for real, and only then publishes with provenance.
+
+```sh
+npm version patch     # or minor, or major
+git push origin main --follow-tags
+```
+
+CI installs the built tarball on Node 20, 22 and 24, on Linux and macOS, and runs the
+command. That job exists because the first version of this package shipped TypeScript and
+would have failed on every machine that installed it.
 
 MIT.
