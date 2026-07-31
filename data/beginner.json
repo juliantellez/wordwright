@@ -1,0 +1,331 @@
+{
+  "pack": "core",
+  "version": 1,
+  "level": "beginner",
+  "exercises": [
+    {
+      "id": "b-rhythm-1",
+      "mode": "drill",
+      "text": "Type whole words rather than single letters, and let your hands find the rhythm.",
+      "focus": ["rhythm", "common-words"],
+      "lesson": {
+        "title": "Speed comes from words, not letters",
+        "explain": "Fast typists do not think in keys. They think in short bursts of three or four letters that their hands already know. Slow down until the whole word comes out in one movement, then let it get quicker."
+      }
+    },
+    {
+      "id": "b-sentence-shape",
+      "mode": "drill",
+      "text": "A sentence opens with a capital letter and closes with a full stop.",
+      "focus": ["capitalisation", "full-stop"],
+      "lesson": {
+        "title": "The two ends of a sentence",
+        "explain": "A capital at the front and a stop at the back are the reader's signal that one complete thought has started and finished. Miss either one and the reader has to work out where the thought ended."
+      }
+    },
+    {
+      "id": "b-its",
+      "mode": "drill",
+      "text": "The dog wagged its tail because it's finally warm outside.",
+      "focus": ["its-vs-its", "apostrophe"],
+      "lesson": {
+        "title": "Its and it's are not the same word",
+        "explain": "It's is only ever short for it is or it has. Its, with no apostrophe, is the possessive, like his and hers. Read the sentence with it is out loud: if it makes sense, you want the apostrophe."
+      }
+    },
+    {
+      "id": "b-their",
+      "mode": "drill",
+      "text": "They're taking their coats over there before the rain starts.",
+      "focus": ["their-there-theyre", "homophones"],
+      "lesson": {
+        "title": "Three words that sound identical",
+        "explain": "They're is they are. Their is possession, and it always sits in front of a noun. There is a place, or the empty word in there is a problem. When in doubt, expand they're and see if the sentence survives."
+      }
+    },
+    {
+      "id": "b-your",
+      "mode": "drill",
+      "text": "You're going to need your umbrella if you're walking home tonight.",
+      "focus": ["your-youre", "homophones"],
+      "lesson": {
+        "title": "You're is two words wearing a coat",
+        "explain": "You're always expands to you are. Your belongs to you: your coat, your idea, your fault. The same expansion test settles every case."
+      }
+    },
+    {
+      "id": "b-agreement",
+      "mode": "drill",
+      "text": "The list of names is long, and the names are hard to read.",
+      "focus": ["subject-verb-agreement"],
+      "lesson": {
+        "title": "The verb agrees with the head of the subject",
+        "explain": "The subject here is list, not names, so it takes is. The words between the subject and the verb are decoration and they do not vote. Find the one noun the sentence is really about, then match the verb to it."
+      }
+    },
+    {
+      "id": "b-list-commas",
+      "mode": "drill",
+      "text": "We bought bread, cheese, olives, and a bottle of cold water.",
+      "focus": ["serial-comma", "lists"],
+      "lesson": {
+        "title": "The comma before the final and",
+        "explain": "That last comma is optional in British usage and standard in American usage. Pick one and hold it. The one time it is never optional is when the last two items could be read as a pair."
+      }
+    },
+    {
+      "id": "b-possessive",
+      "mode": "drill",
+      "text": "The team's report landed on the manager's desk before noon.",
+      "focus": ["possessive-apostrophe"],
+      "lesson": {
+        "title": "Apostrophe s makes it belong to someone",
+        "explain": "One team, one manager, so the apostrophe goes before the s. This is the only job apostrophes have besides marking a missing letter. They never make anything plural."
+      }
+    },
+    {
+      "id": "b-plural-possessive",
+      "mode": "drill",
+      "text": "The players' boots were muddy, but the player's shirt was clean.",
+      "focus": ["possessive-apostrophe", "plurals"],
+      "lesson": {
+        "title": "Where the apostrophe lands tells you how many",
+        "explain": "Players' means several players own the boots. Player's means one player owns the shirt. Write the owner first, then add the apostrophe: if the owner already ends in s, the apostrophe goes after it."
+      }
+    },
+    {
+      "id": "b-question",
+      "mode": "drill",
+      "text": "Where did you leave the keys, and when did you last drive?",
+      "focus": ["question-mark", "word-order"],
+      "lesson": {
+        "title": "A question inverts the verb and the subject",
+        "explain": "You left becomes did you leave. That inversion, not the question mark, is what makes it a question. The mark at the end simply confirms it."
+      }
+    },
+    {
+      "id": "b-to-too-two",
+      "mode": "drill",
+      "text": "She walked to the shop, bought two apples, and ate one too.",
+      "focus": ["to-too-two", "homophones"],
+      "lesson": {
+        "title": "To, too and two",
+        "explain": "To points somewhere or introduces a verb. Too means also or excessively, and it has the extra o because it is the excessive one. Two is the number, and it keeps the w from twin and twice."
+      }
+    },
+    {
+      "id": "b-a-an",
+      "mode": "drill",
+      "text": "An honest answer and a useful one are not always the same thing.",
+      "focus": ["a-vs-an", "sound-not-spelling"],
+      "lesson": {
+        "title": "An goes before a vowel sound, not a vowel letter",
+        "explain": "Honest starts with a vowel sound because the h is silent, so it takes an. Useful starts with a y sound, so it takes a. Say the word out loud and let your ear decide."
+      }
+    },
+    {
+      "id": "b-contractions",
+      "mode": "drill",
+      "text": "We can't finish tonight, so we'll start again at nine tomorrow.",
+      "focus": ["contractions", "apostrophe"],
+      "lesson": {
+        "title": "The apostrophe stands where letters were removed",
+        "explain": "Can't is cannot with the no missing. We'll is we will with the wi missing. Put the apostrophe exactly where the gap is, which is why it is can't and never ca'nt."
+      }
+    },
+    {
+      "id": "b-proper-nouns",
+      "mode": "drill",
+      "text": "On Monday, Maria flew from Bogota to Lisbon with a suitcase and a laptop.",
+      "focus": ["proper-nouns", "capitalisation"],
+      "lesson": {
+        "title": "Names of particular things take a capital",
+        "explain": "Monday, Maria, Bogota and Lisbon are all one specific thing, so they are capitalised. Suitcase and laptop are any old suitcase and laptop, so they are not."
+      }
+    },
+    {
+      "id": "b-numbers",
+      "mode": "drill",
+      "text": "She wrote nine drafts in three days, then cut the piece to 400 words.",
+      "focus": ["numbers-in-prose"],
+      "lesson": {
+        "title": "Spell out the small ones, use figures for the rest",
+        "explain": "Most house styles spell out one to nine and switch to figures at 10. The exception is a measured figure that carries weight, like 400 words or 3 seconds, where the digits are the point."
+      }
+    },
+    {
+      "id": "b-quotes",
+      "mode": "drill",
+      "text": "He said, \"The train leaves at six,\" and then he checked the time again.",
+      "focus": ["quotation-marks", "dialogue"],
+      "lesson": {
+        "title": "The comma goes inside the quotation",
+        "explain": "When speech runs into the rest of the sentence, the punctuation that belongs to the speech stays inside the marks. A comma introduces the quotation, and a comma closes it before the sentence carries on."
+      }
+    },
+    {
+      "id": "b-compound",
+      "mode": "drill",
+      "text": "The rain stopped, and the street filled with people carrying umbrellas.",
+      "focus": ["compound-sentence", "comma-before-and"],
+      "lesson": {
+        "title": "A comma before and when both halves could stand alone",
+        "explain": "The rain stopped is a sentence. The street filled with people is a sentence. Joining two whole sentences with and takes a comma. Joining a sentence to a fragment does not."
+      }
+    },
+    {
+      "id": "b-then-than",
+      "mode": "drill",
+      "text": "First we ate, and then we walked; the walk was longer than the meal.",
+      "focus": ["then-vs-than", "homophones"],
+      "lesson": {
+        "title": "Then is time, than is comparison",
+        "explain": "Then answers when. Than answers compared to what. If you can replace the word with next, you want then. If you can replace it with compared with, you want than."
+      }
+    },
+    {
+      "id": "b-symbols",
+      "mode": "drill",
+      "text": "Email hello@example.com, call 020 7946 0821, or knock on door 14B.",
+      "focus": ["symbols", "numbers", "reach-keys"],
+      "lesson": {
+        "title": "The keys your fingers avoid",
+        "explain": "The at sign, digits and capitals sit off the home row and they are where most people lose their speed. Practising them inside a real sentence is worth more than drilling them alone."
+      }
+    },
+    {
+      "id": "b-double-letters",
+      "mode": "drill",
+      "text": "The committee agreed to address the accommodation and the parking separately.",
+      "focus": ["double-letters", "spelling"],
+      "lesson": {
+        "title": "Doubled letters are where the fingers stumble",
+        "explain": "Committee, address and accommodation each hide two doubled pairs, and the same finger has to fire twice in a row. Slow down on the double and let the second press land cleanly."
+      }
+    },
+    {
+      "id": "b-compose-its",
+      "mode": "compose",
+      "prompt": "Fix the two apostrophes. Keep the sentence otherwise as it is.",
+      "starter": "The company said its going to move it's headquarters.",
+      "checks": [
+        {
+          "kind": "requires_pattern",
+          "pattern": "it's going",
+          "hint": "It's going is it is going, so this one takes the apostrophe."
+        },
+        {
+          "kind": "requires_pattern",
+          "pattern": "\\bits headquarters\\b",
+          "hint": "The headquarters belong to the company, and possessive its takes no apostrophe."
+        }
+      ],
+      "model": "The company said it's going to move its headquarters.",
+      "focus": ["its-vs-its", "apostrophe"],
+      "lesson": {
+        "title": "Read it as it is and the answer appears",
+        "explain": "It is going to move works, so that one keeps the apostrophe. It is headquarters does not work, so that one loses it. This single test settles every its you will ever write."
+      }
+    },
+    {
+      "id": "b-compose-join",
+      "mode": "compose",
+      "prompt": "Join these two sentences into one, using and.",
+      "starter": "The rain stopped. The street filled with people.",
+      "checks": [
+        { "kind": "requires_pattern", "pattern": ",\\s*and\\b", "hint": "Two whole sentences joined by and want a comma in front of the and." },
+        { "kind": "max_words", "count": 16, "hint": "Keep it to one sentence of sixteen words or fewer." },
+        { "kind": "min_words", "count": 8, "hint": "Do not drop half the meaning. Both halves need to survive." }
+      ],
+      "model": "The rain stopped, and the street filled with people.",
+      "focus": ["compound-sentence", "comma-before-and"],
+      "lesson": {
+        "title": "Two sentences, one join, one comma",
+        "explain": "When both halves could stand alone, the comma before and is what tells the reader a second complete thought is coming. Without it the sentence runs together."
+      }
+    },
+    {
+      "id": "b-compose-possessive",
+      "mode": "compose",
+      "prompt": "Write one sentence saying the bag belongs to Anna. Use an apostrophe.",
+      "checks": [
+        { "kind": "requires_pattern", "pattern": "Anna's", "hint": "Anna owns it, so write Anna's bag." },
+        { "kind": "max_words", "count": 15, "hint": "One short sentence is enough here." }
+      ],
+      "model": "Anna's bag was still by the door in the morning.",
+      "focus": ["possessive-apostrophe"],
+      "lesson": {
+        "title": "Owner first, then the apostrophe",
+        "explain": "Write the owner exactly as it is spelled, then add the apostrophe and the s. That order keeps you right even when the owner is a name ending in s."
+      }
+    },
+    {
+      "id": "b-compose-their",
+      "mode": "compose",
+      "prompt": "Write one sentence that uses they're and their, both correctly.",
+      "checks": [
+        { "kind": "requires_pattern", "pattern": "\\bthey're\\b", "hint": "Use they're somewhere, meaning they are." },
+        { "kind": "requires_pattern", "pattern": "\\btheir\\b", "hint": "Use their as well, in front of a noun they own." },
+        { "kind": "max_words", "count": 20, "hint": "Twenty words is plenty for this." }
+      ],
+      "model": "They're bringing their own tools, so we only need the ladder.",
+      "focus": ["their-there-theyre", "homophones"],
+      "lesson": {
+        "title": "One expands, the other owns",
+        "explain": "They're always survives being expanded to they are. Their never does, because it is doing a different job: it attaches a noun to the people who have it."
+      }
+    },
+    {
+      "id": "b-compose-question",
+      "mode": "compose",
+      "prompt": "Turn this statement into a question.",
+      "starter": "You left the keys on the table.",
+      "checks": [
+        { "kind": "requires_pattern", "pattern": "\\?", "hint": "A question ends with a question mark." },
+        {
+          "kind": "requires_pattern",
+          "pattern": "^(did|do|have|where|when|why|how|was|were)\\b",
+          "hint": "Start with the helping verb or a question word: Did you, Where did, Why did."
+        }
+      ],
+      "model": "Did you leave the keys on the table?",
+      "focus": ["question-mark", "word-order"],
+      "lesson": {
+        "title": "The verb moves in front of the subject",
+        "explain": "English asks by inverting: you left becomes did you leave. Adding a question mark to an ordinary statement makes a sentence that reads as a shrug rather than a question."
+      }
+    },
+    {
+      "id": "b-compose-vocab-brisk",
+      "mode": "compose",
+      "prompt": "Write one sentence about a morning walk using the word below.",
+      "vocabulary": [{ "word": "brisk", "meaning": "quick and energetic, often with a bite of cold in it" }],
+      "checks": [
+        { "kind": "requires_word", "word": "brisk", "hint": "Use brisk in the sentence." },
+        { "kind": "min_words", "count": 6, "hint": "Give the word something to do. Six words or more." },
+        { "kind": "max_words", "count": 18, "hint": "Keep it under eighteen words so the word carries weight." }
+      ],
+      "model": "A brisk walk before breakfast wakes me faster than coffee does.",
+      "focus": ["vocabulary", "word-choice"],
+      "lesson": {
+        "title": "A new word needs a real sentence",
+        "explain": "Words stick when they arrive attached to something you can picture. Brisk is not just fast: it carries cold air and short steps, and a sentence about a walk lets that meaning land."
+      }
+    },
+    {
+      "id": "b-compose-a-an",
+      "mode": "compose",
+      "prompt": "Write one sentence containing both an hour and a university.",
+      "checks": [
+        { "kind": "requires_pattern", "pattern": "\\ban hour\\b", "hint": "Hour begins with a vowel sound, so it takes an." },
+        { "kind": "requires_pattern", "pattern": "\\ba university\\b", "hint": "University begins with a y sound, so it takes a." }
+      ],
+      "model": "An hour later she was standing outside a university she had never visited.",
+      "focus": ["a-vs-an", "sound-not-spelling"],
+      "lesson": {
+        "title": "Your ear beats the spelling",
+        "explain": "Hour and university are the pair that proves the rule is about sound. The h is silent so hour opens with a vowel, and university opens with the consonant sound you hear in yes."
+      }
+    }
+  ]
+}

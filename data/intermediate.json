@@ -1,0 +1,338 @@
+{
+  "pack": "core",
+  "version": 1,
+  "level": "intermediate",
+  "exercises": [
+    {
+      "id": "i-semicolon",
+      "mode": "drill",
+      "text": "The deploy finished at two; nobody noticed until the morning.",
+      "focus": ["semicolon", "clause-joining"],
+      "lesson": {
+        "title": "A semicolon joins two whole sentences",
+        "explain": "Both halves could stand alone, and the semicolon says they belong together. Use it when a full stop would break a link the reader needs to feel. If either half cannot stand alone, you want a comma instead."
+      }
+    },
+    {
+      "id": "i-comma-splice",
+      "mode": "drill",
+      "text": "The test passed locally; it failed in the pipeline twenty minutes later.",
+      "focus": ["comma-splice", "semicolon"],
+      "lesson": {
+        "title": "A comma cannot hold two sentences together",
+        "explain": "The test passed locally, it failed in the pipeline is a comma splice, and it is the most common punctuation error in professional writing. Fix it with a semicolon, a full stop, or a joining word like but."
+      }
+    },
+    {
+      "id": "i-colon",
+      "mode": "drill",
+      "text": "The cause was the one nobody checked: the certificate had expired overnight.",
+      "focus": ["colon", "emphasis"],
+      "lesson": {
+        "title": "A colon promises the answer",
+        "explain": "Everything before the colon sets up an expectation, and everything after it pays that expectation off. It is the strongest punctuation you have for landing a point, which is why it should stay rare."
+      }
+    },
+    {
+      "id": "i-restrictive",
+      "mode": "drill",
+      "text": "The report that arrived on Friday is the one the board actually read.",
+      "focus": ["restrictive-clause", "that-vs-which"],
+      "lesson": {
+        "title": "That narrows, and takes no commas",
+        "explain": "That arrived on Friday tells you which report out of several. Remove it and the sentence means something different, which is exactly why it gets no commas: it is load bearing."
+      }
+    },
+    {
+      "id": "i-nonrestrictive",
+      "mode": "drill",
+      "text": "The report, which arrived on Friday, ran to ninety pages of appendices.",
+      "focus": ["non-restrictive-clause", "that-vs-which"],
+      "lesson": {
+        "title": "Which adds, and takes commas",
+        "explain": "There is only one report here, and the arrival date is extra colour. Lift the clause out and the sentence still means the same thing. Anything you can lift out that cleanly belongs inside commas."
+      }
+    },
+    {
+      "id": "i-active-voice",
+      "mode": "drill",
+      "text": "An expired certificate took the payment service down for nine minutes.",
+      "focus": ["active-voice", "verbs"],
+      "lesson": {
+        "title": "Active voice names the actor first",
+        "explain": "The passive version, the service was taken down, hides what did it. Passive is the right choice when the actor is genuinely unknown or irrelevant. It is the wrong choice when it is being used to avoid saying who."
+      }
+    },
+    {
+      "id": "i-parallel",
+      "mode": "drill",
+      "text": "She read the logs, found the timeout, and shipped the fix before lunch.",
+      "focus": ["parallel-structure", "lists"],
+      "lesson": {
+        "title": "Items in a list take the same shape",
+        "explain": "Read, found and shipped are all past tense and all belong to the same subject. The moment one item changes shape, the sentence stumbles and the reader has to reread it."
+      }
+    },
+    {
+      "id": "i-dangling",
+      "mode": "drill",
+      "text": "Walking into the room, she noticed the window had been left open.",
+      "focus": ["dangling-modifier", "word-order"],
+      "lesson": {
+        "title": "The opening phrase attaches to the next noun",
+        "explain": "Walking into the room describes she, and she is the first thing after the comma, so the sentence works. Write walking into the room, the window was open and the window is doing the walking."
+      }
+    },
+    {
+      "id": "i-who-whom",
+      "mode": "drill",
+      "text": "The engineer who wrote the patch is the one whom the team consulted.",
+      "focus": ["who-vs-whom", "pronouns"],
+      "lesson": {
+        "title": "Who acts, whom is acted upon",
+        "explain": "Swap in he or him. He wrote the patch, so it is who. The team consulted him, so it is whom. Whom is fading from spoken English, and forcing it where it does not belong reads worse than avoiding it."
+      }
+    },
+    {
+      "id": "i-affect-effect",
+      "mode": "drill",
+      "text": "The outage did not affect revenue, but the effect on trust lasted months.",
+      "focus": ["affect-vs-effect", "word-choice"],
+      "lesson": {
+        "title": "Affect is usually the verb, effect usually the noun",
+        "explain": "Affect does something. An effect is the thing that results. The exception is to effect change, meaning to bring it about, and it is rare enough that you can treat the simple rule as the rule."
+      }
+    },
+    {
+      "id": "i-fewer-less",
+      "mode": "drill",
+      "text": "Fewer alerts fired this week, which left less noise in the channel.",
+      "focus": ["fewer-vs-less", "countability"],
+      "lesson": {
+        "title": "Fewer counts, less measures",
+        "explain": "If you can count the things one by one, use fewer: fewer alerts, fewer people. If it is a quantity you pour or measure, use less: less noise, less time. Money and distance take less because they behave as amounts."
+      }
+    },
+    {
+      "id": "i-concise-in-order-to",
+      "mode": "drill",
+      "text": "We cached the response to cut the round trip, not to hide the latency.",
+      "focus": ["concision", "cutting-filler"],
+      "lesson": {
+        "title": "In order to is just to",
+        "explain": "Three words doing one word's job. The same goes for due to the fact that, which is because, and at this point in time, which is now. Cut them and nothing is lost but weight."
+      }
+    },
+    {
+      "id": "i-nominalisation",
+      "mode": "drill",
+      "text": "The board decided on Tuesday and told the staff on Wednesday morning.",
+      "focus": ["nominalisation", "strong-verbs"],
+      "lesson": {
+        "title": "Turn the noun back into a verb",
+        "explain": "Made a decision is a verb wearing a noun costume. Decided is shorter, clearer and more direct. Watch for words ending in tion, ment and ance: each one is usually a buried verb."
+      }
+    },
+    {
+      "id": "i-front-clause",
+      "mode": "drill",
+      "text": "Because the queue drained slowly, the retries piled up behind it.",
+      "focus": ["subordinate-clause", "commas"],
+      "lesson": {
+        "title": "A clause in front takes a comma behind it",
+        "explain": "When the sentence opens with because, although, if or while, the comma marks where the setup ends and the main statement begins. Put the same clause at the end and the comma usually disappears."
+      }
+    },
+    {
+      "id": "i-decades",
+      "mode": "drill",
+      "text": "The band formed in the 1990s and released four albums in five years.",
+      "focus": ["apostrophe", "numbers-in-prose"],
+      "lesson": {
+        "title": "Decades are plural, not possessive",
+        "explain": "The 1990s is simply more than one year in that decade, so it takes a plain s. An apostrophe there would say the decade owns something. The same goes for CDs, URLs and the 1920s."
+      }
+    },
+    {
+      "id": "i-however",
+      "mode": "drill",
+      "text": "The fix worked; however, it moved the failure one layer down.",
+      "focus": ["conjunctive-adverb", "semicolon"],
+      "lesson": {
+        "title": "However is not a joining word",
+        "explain": "However cannot hold two sentences together the way but can. It needs a semicolon or a full stop in front of it and a comma behind it. Using a comma on both sides creates a splice."
+      }
+    },
+    {
+      "id": "i-dash-removal",
+      "mode": "drill",
+      "text": "There was one thing left to check: the queue nobody owned.",
+      "focus": ["dash-alternatives", "punctuation-choice"],
+      "lesson": {
+        "title": "A dash usually hides a decision",
+        "explain": "Every dash can be a comma, a colon, a pair of brackets or a full stop, and each of those says something more precise about the join. Choosing one forces you to decide what the relationship actually is."
+      }
+    },
+    {
+      "id": "i-expletive",
+      "mode": "drill",
+      "text": "Three services read that table, and two of them write to it as well.",
+      "focus": ["expletive-construction", "concision"],
+      "lesson": {
+        "title": "There are is usually a delay",
+        "explain": "There are three services that read that table starts with two words that carry no meaning. Move the real subject to the front and the sentence gets shorter and lands sooner."
+      }
+    },
+    {
+      "id": "i-that-omission",
+      "mode": "drill",
+      "text": "She said the migration would finish before the traffic picked up again.",
+      "focus": ["concision", "clause-joining"],
+      "lesson": {
+        "title": "You can often drop that",
+        "explain": "She said that the migration reads fine, and so does she said the migration. Drop it when the sentence stays clear, and keep it when the next words could be read as the object of the verb."
+      }
+    },
+    {
+      "id": "i-vocab-tacit",
+      "mode": "drill",
+      "text": "The team had a tacit agreement that nobody deployed after four on Friday.",
+      "focus": ["vocabulary", "precision"],
+      "vocabulary": [{ "word": "tacit", "meaning": "understood without being said aloud" }],
+      "lesson": {
+        "title": "Tacit means agreed without being spoken",
+        "explain": "A tacit agreement was never written down or announced, and everyone follows it anyway. It is more precise than unspoken because it carries the agreement as well as the silence."
+      }
+    },
+    {
+      "id": "i-compose-splice",
+      "mode": "compose",
+      "prompt": "Fix the comma splice. Keep both halves.",
+      "starter": "The test passed locally, it failed in the pipeline.",
+      "checks": [
+        {
+          "kind": "forbids_pattern",
+          "pattern": "locally,\\s*it failed",
+          "hint": "A comma still cannot hold two whole sentences together. Use a semicolon, a full stop, or add but."
+        },
+        {
+          "kind": "requires_pattern",
+          "pattern": "(;|\\.\\s+It|,\\s*but\\b|\\byet\\b)",
+          "hint": "Pick one join: a semicolon, two sentences, or a comma with but."
+        }
+      ],
+      "model": "The test passed locally; it failed in the pipeline.",
+      "focus": ["comma-splice", "semicolon"],
+      "lesson": {
+        "title": "Three ways out of a splice",
+        "explain": "A semicolon keeps the link tight. A full stop puts weight on the second half. A comma with but names the contradiction. All three are correct, and which one you pick tells the reader what you meant."
+      }
+    },
+    {
+      "id": "i-compose-active",
+      "mode": "compose",
+      "prompt": "Rewrite this so whatever caused the outage does the acting.",
+      "starter": "The outage was caused by an expired certificate.",
+      "checks": [
+        {
+          "kind": "forbids_pattern",
+          "pattern": "\\b(was|were|is|are|been|being)\\s+\\w+(ed|en)\\b",
+          "hint": "Still passive. Put the actor in front of the verb: something did something."
+        },
+        { "kind": "max_words", "count": 12, "hint": "Active voice comes out shorter. Twelve words or fewer." },
+        { "kind": "requires_word", "word": "certificate", "hint": "Keep the certificate in the sentence, it is the actor." }
+      ],
+      "model": "An expired certificate caused the outage.",
+      "focus": ["active-voice", "verbs"],
+      "lesson": {
+        "title": "Passive costs you words and the actor",
+        "explain": "Was caused by needs three words to do what caused does in one, and it puts the cause at the end where it carries least weight. Move the actor to the front and the sentence tightens on its own."
+      }
+    },
+    {
+      "id": "i-compose-nominalisation",
+      "mode": "compose",
+      "prompt": "Rewrite this with a verb doing the work.",
+      "starter": "The team made a decision about the postponement of the release.",
+      "checks": [
+        { "kind": "forbids_pattern", "pattern": "\\bmade a decision\\b", "hint": "Made a decision is decided." },
+        { "kind": "forbids_pattern", "pattern": "\\bpostponement\\b", "hint": "Postponement is postponed, or delayed." },
+        { "kind": "max_words", "count": 10, "hint": "Ten words is enough once the nouns turn back into verbs." }
+      ],
+      "model": "The team decided to postpone the release.",
+      "focus": ["nominalisation", "strong-verbs", "concision"],
+      "lesson": {
+        "title": "Words ending in tion and ment hide verbs",
+        "explain": "Decision hides decide. Postponement hides postpone. Each buried verb costs you a weak helper verb like made or carried out, and the sentence pays for it twice."
+      }
+    },
+    {
+      "id": "i-compose-semicolon",
+      "mode": "compose",
+      "prompt": "Join these with a semicolon, changing nothing else.",
+      "starter": "The queue drained slowly. The retries piled up behind it.",
+      "checks": [
+        { "kind": "requires_pattern", "pattern": ";", "hint": "Use a semicolon between the two halves." },
+        { "kind": "forbids_pattern", "pattern": ";\\s*[a-z]*\\s*(and|but|so)\\b", "hint": "A semicolon replaces the joining word. Do not use both." },
+        { "kind": "max_words", "count": 16, "hint": "Both halves, nothing added." }
+      ],
+      "model": "The queue drained slowly; the retries piled up behind it.",
+      "focus": ["semicolon", "clause-joining"],
+      "lesson": {
+        "title": "The semicolon does the joining word's job",
+        "explain": "Semicolon and and together is a belt with braces. Pick one. The semicolon is the quieter choice, and it leaves the relationship between the halves for the reader to feel rather than be told."
+      }
+    },
+    {
+      "id": "i-compose-which",
+      "mode": "compose",
+      "prompt": "Add the arrival date as extra information, using a which clause.",
+      "starter": "The report ran to ninety pages.",
+      "checks": [
+        { "kind": "requires_pattern", "pattern": ",\\s*which\\b", "hint": "A which clause that adds extra colour opens with a comma." },
+        { "kind": "requires_pattern", "pattern": "which[^,]+,", "hint": "Close the clause with a second comma before the sentence carries on." }
+      ],
+      "model": "The report, which arrived on Friday, ran to ninety pages.",
+      "focus": ["non-restrictive-clause", "commas"],
+      "lesson": {
+        "title": "Extra information travels inside two commas",
+        "explain": "The pair of commas is a set of handles: whatever sits between them can be lifted out without changing what the sentence claims. One comma without the other leaves the reader holding a clause that never closes."
+      }
+    },
+    {
+      "id": "i-compose-cut",
+      "mode": "compose",
+      "prompt": "Cut this to twelve words or fewer without losing the meaning.",
+      "starter": "Due to the fact that the queue was not being monitored at this point in time, the team was not made aware of the backlog.",
+      "checks": [
+        { "kind": "max_words", "count": 12, "hint": "Twelve words. Every phrase here has a one word version." },
+        { "kind": "forbids_pattern", "pattern": "due to the fact that", "hint": "Due to the fact that is because." },
+        { "kind": "forbids_pattern", "pattern": "at this point in time", "hint": "At this point in time is now, and here it can go entirely." },
+        { "kind": "requires_word", "word": "queue", "hint": "Keep the queue: it is what the sentence is about." }
+      ],
+      "model": "Nobody monitored the queue, so the team missed the backlog.",
+      "focus": ["concision", "cutting-filler"],
+      "lesson": {
+        "title": "Filler phrases have one word versions",
+        "explain": "Due to the fact that is because. At this point in time is now. Was not made aware of is missed. Twenty four words became ten, and nothing the reader needed was lost."
+      }
+    },
+    {
+      "id": "i-compose-vocab-ostensible",
+      "mode": "compose",
+      "prompt": "Write one sentence using the word below, about a stated reason you doubt.",
+      "vocabulary": [{ "word": "ostensible", "meaning": "stated as the reason, while the real one sits underneath" }],
+      "checks": [
+        { "kind": "requires_word", "word": "ostensible", "hint": "Use ostensible or ostensibly in the sentence." },
+        { "kind": "min_words", "count": 8, "hint": "Give the doubt somewhere to live. Eight words or more." },
+        { "kind": "max_words", "count": 24, "hint": "Under twenty four words." }
+      ],
+      "model": "The ostensible reason was cost, though the timing suggested something else.",
+      "focus": ["vocabulary", "precision", "word-choice"],
+      "lesson": {
+        "title": "Ostensible carries the doubt for you",
+        "explain": "Saying the ostensible reason lets you report what was claimed without endorsing it, and without accusing anyone. One word does the work of a whole hedging clause, which is what precise vocabulary buys you."
+      }
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "pack": "core",
+  "version": 1,
+  "level": "advanced",
+  "exercises": [
+    {
+      "id": "a-rhythm-short-last",
+      "mode": "drill",
+      "text": "We spent three weeks tuning the query, rewriting the index, and arguing about the cache. It was the wrong table.",
+      "focus": ["rhythm", "sentence-length"],
+      "lesson": {
+        "title": "The short sentence lands the point",
+        "explain": "A long sentence earns a very short one after it. The reader has been holding a lot of clauses, and the four word sentence is where they get to put it all down. This is the single easiest way to make prose sound like a person."
+      }
+    },
+    {
+      "id": "a-subjunctive",
+      "mode": "drill",
+      "text": "If I were designing it again, I would put the queue in front of the database.",
+      "focus": ["subjunctive", "mood"],
+      "lesson": {
+        "title": "Were, not was, for the thing that is not true",
+        "explain": "The subjunctive marks a hypothetical: if I were, if she were, as though it were. Was would say it actually happened. The distinction is quietly disappearing from speech, which is exactly why it still signals care in writing."
+      }
+    },
+    {
+      "id": "a-third-conditional",
+      "mode": "drill",
+      "text": "Had the alert named the service, we would have found it in a minute.",
+      "focus": ["conditional", "inversion"],
+      "lesson": {
+        "title": "Dropping the if inverts the verb",
+        "explain": "If the alert had named the service becomes had the alert named the service. The inversion is formal but not stuffy, and it removes a word while sounding more deliberate. Use it once in a piece, never twice."
+      }
+    },
+    {
+      "id": "a-appositive",
+      "mode": "drill",
+      "text": "The service everyone forgot, a single Lambda behind an unmonitored queue, had been failing for a week.",
+      "focus": ["appositive", "commas"],
+      "lesson": {
+        "title": "An appositive renames the noun in passing",
+        "explain": "A single Lambda behind an unmonitored queue restates the subject without a verb, and it costs the reader nothing because it sits inside commas. It is how you define something without stopping to define it."
+      }
+    },
+    {
+      "id": "a-anaphora",
+      "mode": "drill",
+      "text": "Close enough to pass review. Close enough to ship. Close enough that nobody looked again.",
+      "focus": ["anaphora", "repetition", "rhythm"],
+      "lesson": {
+        "title": "Repeat the opening to build pressure",
+        "explain": "Three sentences starting the same way create a rising beat, and the last one is where you break it. Used once in a piece it is memorable. Used twice it becomes a mannerism."
+      }
+    },
+    {
+      "id": "a-concrete-nouns",
+      "mode": "drill",
+      "text": "The bill said ninety five million dollars. The real figure was twenty four cents.",
+      "focus": ["concrete-detail", "specificity"],
+      "lesson": {
+        "title": "A number beats an adjective",
+        "explain": "Enormous, significant and substantial all mean whatever the reader decides. Ninety five million dollars means one thing. Reach for the measured figure before the intensifier every single time."
+      }
+    },
+    {
+      "id": "a-hedges",
+      "mode": "drill",
+      "text": "The cache is the bottleneck, and moving it will not fix the write path.",
+      "focus": ["hedging", "confidence"],
+      "lesson": {
+        "title": "Stacked hedges read as evasion",
+        "explain": "It may perhaps be worth considering that the cache could possibly be a factor says less than the cache is the bottleneck, and it costs four times the words. Hedge once when you are genuinely unsure, and say so plainly."
+      }
+    },
+    {
+      "id": "a-verb-over-adverb",
+      "mode": "drill",
+      "text": "She skimmed the log, spotted the retry storm, and killed the consumer.",
+      "focus": ["strong-verbs", "adverbs"],
+      "lesson": {
+        "title": "A precise verb makes the adverb redundant",
+        "explain": "Read quickly is skimmed. Said loudly is shouted. Walked slowly is ambled. Each pair trades two vague words for one exact one, and the exact one carries a picture with it."
+      }
+    },
+    {
+      "id": "a-tricolon",
+      "mode": "drill",
+      "text": "It was cheap to build, expensive to run, and impossible to explain.",
+      "focus": ["tricolon", "parallel-structure", "rhythm"],
+      "lesson": {
+        "title": "Three items, identical shape, longest last",
+        "explain": "The three part list is the oldest rhythm in English prose. It works when the three items share a grammatical shape and when the longest sits at the end, because the sentence then falls forwards rather than stopping short."
+      }
+    },
+    {
+      "id": "a-semicolon-list",
+      "mode": "drill",
+      "text": "We shipped three things: a queue, which nobody owned; a dashboard, which nobody read; and an alert, which nobody could act on.",
+      "focus": ["semicolon", "complex-lists"],
+      "lesson": {
+        "title": "Semicolons separate items that already contain commas",
+        "explain": "When each item in a list carries its own comma, commas between the items stop working. Semicolons take over as the higher level separator and the sentence becomes readable again."
+      }
+    },
+    {
+      "id": "a-periodic",
+      "mode": "drill",
+      "text": "After three weeks of tuning, two rewrites, and one long argument about caching, the query was still reading the wrong table.",
+      "focus": ["periodic-sentence", "suspense"],
+      "lesson": {
+        "title": "Hold the main clause until the end",
+        "explain": "A periodic sentence stacks the setup first and delivers the point last, so the reader has to hold everything until it resolves. It creates tension, and it tires the reader if you do it twice in a row."
+      }
+    },
+    {
+      "id": "a-cumulative",
+      "mode": "drill",
+      "text": "The pipeline held, absorbing the retries, draining the backlog, quietly doing the thing it was built for.",
+      "focus": ["cumulative-sentence", "modifiers"],
+      "lesson": {
+        "title": "State it, then let the detail unfold",
+        "explain": "The cumulative sentence is the mirror of the periodic one: the main clause comes first and the modifiers pile up behind it. It reads as observation happening in real time, which is why it suits description."
+      }
+    },
+    {
+      "id": "a-not-only",
+      "mode": "drill",
+      "text": "The migration not only halved the latency but also removed two services.",
+      "focus": ["correlative-conjunction", "parallel-structure"],
+      "lesson": {
+        "title": "Not only and but also must take matching shapes",
+        "explain": "Whatever follows not only has to be the same kind of thing that follows but also. Halved and removed are both past tense verbs, so the sentence balances. Mixing a verb with a noun is the usual failure."
+      }
+    },
+    {
+      "id": "a-dash-to-colon",
+      "mode": "drill",
+      "text": "There was only ever one question: who owns this after Friday?",
+      "focus": ["dash-alternatives", "colon", "punctuation-choice"],
+      "lesson": {
+        "title": "Every dash is a decision you have not made yet",
+        "explain": "A dash can stand in for a colon, a comma, brackets or a full stop, which is precisely the problem: it lets you avoid saying which relationship you meant. Choose the one that names the join and the sentence gets sharper."
+      }
+    },
+    {
+      "id": "a-mixed-metaphor",
+      "mode": "drill",
+      "text": "The plan was a house of cards, and the first gust took the roof off it.",
+      "focus": ["metaphor", "imagery"],
+      "lesson": {
+        "title": "One picture, followed through",
+        "explain": "A house of cards that then gets ironed out or put on the back burner asks the reader to hold two pictures at once, and they hold neither. Pick the image, then stay inside it for the rest of the sentence."
+      }
+    },
+    {
+      "id": "a-vocab-salient",
+      "mode": "drill",
+      "text": "The salient fact was buried on page forty: the contract renewed automatically.",
+      "focus": ["vocabulary", "precision"],
+      "vocabulary": [{ "word": "salient", "meaning": "the one detail that stands out and matters most" }],
+      "lesson": {
+        "title": "Salient means it sticks out",
+        "explain": "Salient is not a synonym for important. It carries the sense of projecting from a surface, so it fits the fact that jumps at you from a page of ordinary ones. Say the salient point when you mean the one that leaps out."
+      }
+    },
+    {
+      "id": "a-vocab-obviate",
+      "mode": "drill",
+      "text": "Caching the response would obviate the second call to the pricing service.",
+      "focus": ["vocabulary", "precision"],
+      "vocabulary": [{ "word": "obviate", "meaning": "to remove the need for something, rather than merely avoid it" }],
+      "lesson": {
+        "title": "Obviate removes the need, not the thing",
+        "explain": "Avoiding a call means you sidestep it. Obviating it means the need for it no longer exists. That distinction is the whole word, and it is why obviate cannot simply be swapped for prevent."
+      }
+    },
+    {
+      "id": "a-vocab-perfunctory",
+      "mode": "drill",
+      "text": "The review was perfunctory: two comments, both about naming, neither about the logic.",
+      "focus": ["vocabulary", "precision"],
+      "vocabulary": [{ "word": "perfunctory", "meaning": "done to satisfy the requirement, with no real attention" }],
+      "lesson": {
+        "title": "Perfunctory is going through the motions",
+        "explain": "A perfunctory review happened, and it was worthless. The word carries both facts at once, which is why it is more useful than quick or shallow, and more diplomatic than careless."
+      }
+    },
+    {
+      "id": "a-vocab-inchoate",
+      "mode": "drill",
+      "text": "The idea was still inchoate, closer to a shape than to a plan.",
+      "focus": ["vocabulary", "precision"],
+      "vocabulary": [{ "word": "inchoate", "meaning": "begun but not yet formed into anything definite" }],
+      "lesson": {
+        "title": "Inchoate is started but not yet a thing",
+        "explain": "Vague describes the description. Inchoate describes the thing itself, which has begun to exist without having taken form. It is the right word for an early idea and the wrong word for a badly explained one."
+      }
+    },
+    {
+      "id": "a-cadence-mixed",
+      "mode": "drill",
+      "text": "We measured everything, logged everything, and dashboarded everything for a year. Nobody looked. The alert that mattered went to a channel with two people in it.",
+      "focus": ["rhythm", "sentence-length", "concrete-detail"],
+      "lesson": {
+        "title": "Vary the length or it reads as a machine",
+        "explain": "Three sentences of the same length in a row flattens into a drone. Long, then very short, then medium is a shape a person makes. Read your paragraph aloud, and split whatever leaves you out of breath."
+      }
+    },
+    {
+      "id": "a-compose-halve",
+      "mode": "compose",
+      "prompt": "Cut this in half without losing anything the reader needs.",
+      "starter": "It is important to note that the caching layer, which was introduced in order to improve the overall performance characteristics of the system, is not currently being utilised by the majority of the endpoints.",
+      "checks": [
+        { "kind": "max_words", "count": 16, "hint": "Sixteen words. The original is thirty three and most of them are packaging." },
+        { "kind": "forbids_pattern", "pattern": "it is important to note", "hint": "It is important to note that adds nothing. Say the thing." },
+        { "kind": "forbids_pattern", "pattern": "\\butilis|\\butiliz", "hint": "Utilise is use." },
+        { "kind": "requires_word", "word": "cach", "hint": "Keep the caching layer, it is the subject." }
+      ],
+      "model": "Most endpoints do not use the caching layer we added for performance.",
+      "focus": ["concision", "cutting-filler", "hedging"],
+      "lesson": {
+        "title": "Cut the packaging before you cut the content",
+        "explain": "It is important to note that, overall performance characteristics, is not currently being utilised. None of that is content. Strip the packaging first and you usually find the sentence was already short."
+      }
+    },
+    {
+      "id": "a-compose-subjunctive",
+      "mode": "compose",
+      "prompt": "Write one sentence about a design you would change, using the subjunctive.",
+      "checks": [
+        { "kind": "requires_pattern", "pattern": "\\b(if i were|were i|if it were|as though it were|if we were)\\b", "hint": "Use were rather than was for the hypothetical: if I were, were I, if we were." },
+        { "kind": "requires_pattern", "pattern": "\\bwould\\b", "hint": "Pair the hypothetical with would, which is what makes it a conditional." },
+        { "kind": "max_words", "count": 26, "hint": "Under twenty six words." }
+      ],
+      "model": "If I were starting again, I would keep the queue and drop the scheduler.",
+      "focus": ["subjunctive", "conditional", "mood"],
+      "lesson": {
+        "title": "Were marks the door you did not walk through",
+        "explain": "If I was starting again reports something that may have happened. If I were starting again says plainly that you are not. The verb form is doing the signalling, and would completes the pair."
+      }
+    },
+    {
+      "id": "a-compose-expletive",
+      "mode": "compose",
+      "prompt": "Rewrite this without there are, keeping the same facts.",
+      "starter": "There are three services that write to the table, and there is no owner for any of them.",
+      "checks": [
+        { "kind": "forbids_pattern", "pattern": "\\bthere (are|is|were|was)\\b", "hint": "Move the real subject to the front. Three services write, not there are three services that write." },
+        { "kind": "max_words", "count": 16, "hint": "Sixteen words or fewer once the delay is gone." },
+        { "kind": "requires_word", "word": "service", "hint": "Keep the services in the sentence." }
+      ],
+      "model": "Three services write to the table, and none of them has an owner.",
+      "focus": ["expletive-construction", "concision", "strong-verbs"],
+      "lesson": {
+        "title": "There is delays the sentence by two words",
+        "explain": "There and is carry no meaning here. They hold the door open while the real subject waits outside. Move the subject in front of the verb and the sentence starts doing something immediately."
+      }
+    },
+    {
+      "id": "a-compose-landing",
+      "mode": "compose",
+      "prompt": "Write two sentences about a bug: a long one, then one of four words or fewer.",
+      "checks": [
+        { "kind": "requires_pattern", "pattern": "[.!?]\\s+\\S+(\\s+\\S+){0,3}[.!?]\\s*$", "hint": "The second sentence must be four words or fewer, and it must end with a stop." },
+        { "kind": "min_words", "count": 18, "hint": "The first sentence should be long enough that the short one lands. Eighteen words in total, at least." }
+      ],
+      "model": "We spent two days reading the consumer, the producer, and every dashboard we had. The clock was wrong.",
+      "focus": ["rhythm", "sentence-length"],
+      "lesson": {
+        "title": "The short sentence is where the meaning lands",
+        "explain": "The long sentence is the work. The short one is the verdict. Putting the verdict in its own four words gives the reader somewhere to stop, and it is the difference between prose that breathes and prose that drones."
+      }
+    },
+    {
+      "id": "a-compose-hedges",
+      "mode": "compose",
+      "prompt": "Rewrite this so it states one thing plainly.",
+      "starter": "It may perhaps be worth considering that the retry logic could potentially be contributing to some of the load we are possibly seeing.",
+      "checks": [
+        { "kind": "forbids_pattern", "pattern": "\\b(perhaps|potentially|possibly|may be worth|somewhat|arguably)\\b", "hint": "Pick one position and state it. Stacked hedges say less, not more." },
+        { "kind": "max_words", "count": 14, "hint": "Fourteen words. The hedges were most of the original." },
+        { "kind": "requires_word", "word": "retry", "hint": "Keep the retry logic as the subject." }
+      ],
+      "model": "The retry logic is generating most of the load.",
+      "focus": ["hedging", "confidence", "concision"],
+      "lesson": {
+        "title": "One hedge is honesty, four is evasion",
+        "explain": "If you are genuinely unsure, say I have not measured this yet, which is a fact about your knowledge. Stacking may, perhaps, could and possibly instead protects the writer and leaves the reader with nothing to act on."
+      }
+    },
+    {
+      "id": "a-compose-appositive",
+      "mode": "compose",
+      "prompt": "Add a definition of the service inside the sentence, using an appositive.",
+      "starter": "The indexer had been failing for a week.",
+      "checks": [
+        { "kind": "requires_pattern", "pattern": ",[^,]+,", "hint": "An appositive sits between two commas, restating the noun without a verb." },
+        { "kind": "forbids_pattern", "pattern": ",\\s*(which|that|who)\\b", "hint": "An appositive has no relative pronoun. Drop the which and leave the naming phrase on its own." },
+        { "kind": "requires_word", "word": "indexer", "hint": "Keep the indexer as the subject." }
+      ],
+      "model": "The indexer, a single job nobody had touched since March, had been failing for a week.",
+      "focus": ["appositive", "commas", "concision"],
+      "lesson": {
+        "title": "Define in passing, without stopping",
+        "explain": "An appositive lets you tell the reader what something is without a second sentence and without a which clause. It reads as an aside because it is one, and it costs the sentence nothing but two commas."
+      }
+    },
+    {
+      "id": "a-compose-vocab-salient",
+      "mode": "compose",
+      "prompt": "Write one sentence using both words below, about something buried in a document.",
+      "vocabulary": [
+        { "word": "salient", "meaning": "the one detail that stands out and matters most" },
+        { "word": "perfunctory", "meaning": "done to satisfy the requirement, with no real attention" }
+      ],
+      "checks": [
+        { "kind": "requires_word", "word": "salient", "hint": "Use salient for the detail that stands out." },
+        { "kind": "requires_word", "word": "perfunctory", "hint": "Use perfunctory for the attention it was given." },
+        { "kind": "max_words", "count": 26, "hint": "Under twenty six words: two precise words should shorten the sentence, not lengthen it." }
+      ],
+      "model": "The salient clause sat on page forty, and the review that missed it was perfunctory.",
+      "focus": ["vocabulary", "precision", "word-choice"],
+      "lesson": {
+        "title": "Precise words shorten sentences",
+        "explain": "Salient replaces the one that really matters here. Perfunctory replaces done quickly without paying proper attention. Two words carry eleven, which is the whole argument for building a vocabulary: it is compression, not decoration."
+      }
+    }
+  ]
+}
