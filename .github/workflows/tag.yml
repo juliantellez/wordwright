@@ -1,0 +1,54 @@
+name: Tag and release
+
+# Releasing is a decision, and the decision is the version number in package.json.
+# Bump it in a pull request, merge, and this tags the commit and hands straight over to
+# the release workflow. Merge anything that leaves the version alone and nothing happens.
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  tag:
+    name: Tag the version if it is new
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      version: ${{ steps.check.outputs.version }}
+      created: ${{ steps.check.outputs.created }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Tags are needed to answer "have we already released this version".
+          fetch-depth: 0
+
+      - id: check
+        run: |
+          version="$(node -p "require('./package.json').version")"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+          if git rev-parse -q --verify "refs/tags/v$version" >/dev/null; then
+            echo "v$version is already tagged, so there is nothing to release."
+            echo "created=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "v$version" -m "v$version"
+          git push origin "v$version"
+          echo "tagged v$version"
+          echo "created=true" >> "$GITHUB_OUTPUT"
+
+  release:
+    name: Release
+    needs: tag
+    if: needs.tag.outputs.created == 'true'
+    permissions:
+      contents: read
+      id-token: write
+    uses: ./.github/workflows/release.yml
+    with:
+      version: ${{ needs.tag.outputs.version }}
+    secrets: inherit
