@@ -43,6 +43,7 @@ jobs:
       # before it goes anywhere near the registry.
       - name: Install it and run it
         run: |
+          mkdir -p packed
           npm pack --pack-destination ./packed
           npm install -g ./packed/wordwright-*.tgz
           wordwright --help
