@@ -163,14 +163,33 @@ So `npm run build` compiles `src/` to `dist/`, and `dist/cli.js` is what the `wo
 command points at. The `.ts` import extensions are rewritten to `.js` on the way out, and
 the shebang loses its type stripping flags.
 
-Publishing happens in CI, never from a laptop. Push a tag and the release workflow checks
-the tag against `package.json`, runs the tests, builds, installs the packed tarball,
-runs the command for real, and only then publishes with provenance.
+Publishing happens in CI, never from a laptop, and the version number is the trigger.
+Bump it in a pull request and merge. Nothing else releases: merge a hundred commits that
+leave the version alone and nothing goes to npm.
 
 ```sh
-npm version patch     # or minor, or major
-git push origin main --follow-tags
+npm version patch --no-git-tag-version    # or minor, or major
+# commit it, open a pull request, merge
 ```
+
+On merge, `tag.yml` reads `package.json`, and if that version has no tag yet it creates
+one and hands over to `release.yml`, which checks the version again, runs the tests,
+builds, installs the packed tarball, runs the command for real, and only then publishes
+with provenance. Pushing a `v*` tag by hand still works and takes the same path.
+
+```mermaid
+flowchart LR
+  A["version bump merged to main"] --> B{"is vX.Y.Z tagged?"}
+  B -- yes --> C["stop, nothing to do"]
+  B -- no --> D["create and push the tag"]
+  D --> E["release: test, build, install, run"]
+  E --> F["npm publish with provenance"]
+  G["tag pushed by hand"] --> E
+```
+
+The handover is a workflow call rather than a second tag push, because a tag pushed with
+`GITHUB_TOKEN` does not start another workflow run. Done the obvious way, this would tag
+every release quietly and publish none of them.
 
 CI installs the built tarball on Node 20, 22 and 24, on Linux and macOS, and runs the
 command. That job exists because the first version of this package shipped TypeScript and
