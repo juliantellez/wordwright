@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    name: Typecheck, test and build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # Running the tests needs type stripping, which arrived in Node 22.6.
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+
+      # The tarball every later job installs is built once, here, on one version.
+      - name: Pack
+        if: matrix.node == 24
+        run: npm pack --pack-destination ./packed
+      - uses: actions/upload-artifact@v4
+        if: matrix.node == 24
+        with:
+          name: tarball
+          path: packed/*.tgz
+
+  package:
+    name: Install the package and run it
+    needs: check
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        # The published build is plain JavaScript, so it has to run on the oldest
+        # version the engines field claims. This job is what catches a broken claim.
+        node: [20, 22, 24]
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: tarball
+      - name: Install globally
+        run: npm install -g ./wordwright-*.tgz
+      - name: Run it
+        run: |
+          wordwright --help
+          wordwright packs | tee packs.txt
+          grep -q beginner packs.txt
+          grep -q advanced packs.txt
+          wordwright stats

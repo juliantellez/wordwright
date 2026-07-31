@@ -1,0 +1,54 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+  # Needed for npm provenance, which ties the published tarball to this run.
+  id-token: write
+
+jobs:
+  publish:
+    name: Publish to npm
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          registry-url: 'https://registry.npmjs.org'
+
+      - run: npm ci
+
+      # A tag that disagrees with package.json publishes the wrong version under the
+      # right name, and npm will not let you take it back. Stop before that happens.
+      - name: Check the tag matches package.json
+        run: |
+          tagged="${GITHUB_REF_NAME#v}"
+          declared="$(node -p "require('./package.json').version")"
+          if [ "$tagged" != "$declared" ]; then
+            echo "tag v$tagged does not match package.json $declared"
+            exit 1
+          fi
+
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+
+      # The same check CI runs: install the built package and prove the command works
+      # before it goes anywhere near the registry.
+      - name: Install it and run it
+        run: |
+          npm pack --pack-destination ./packed
+          npm install -g ./packed/wordwright-*.tgz
+          wordwright --help
+          wordwright packs | grep -q beginner
+
+      - name: Publish
+        run: npm publish ./packed/wordwright-*.tgz --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
